@@ -3,6 +3,7 @@
 
 user_string = input("Enter a string: ")
 
+
 print(f"\nOriginal String: {user_string}")
 print(f"Modified String 1: {user_string.lower()}")
 print(f"Modified String 2: {user_string.upper()}")

@@ -18,7 +18,7 @@ for row in data:
     # for example: if minutes_late is 2000, then days = 1, hours = 9, minutes = 20
     # hint: there are 1440 minutes in a day (24 * 60)
     
-    days = 0
+    days = minutes_late // 1440
     hours = 0
     minutes = 0
     
