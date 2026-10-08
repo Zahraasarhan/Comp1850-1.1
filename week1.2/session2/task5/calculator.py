@@ -27,7 +27,7 @@ elif operation == 2:
 elif operation == 3:
     result = num1 * num2
     print(f"The result of multiplication is: {result}")
-elif opprtation == 4:
+elif operation  == 4:
     if num2 != 0:
         result = num1 / num2
         print(f"The result of division is: {result}")
