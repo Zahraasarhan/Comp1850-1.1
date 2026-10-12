@@ -17,4 +17,5 @@ while True:
 
 k = 2
 while k <= 200:
-    k= 2 * print(k)
+    k= 2 * k
+    print(k)
