@@ -1,5 +1,9 @@
 # Week 1.3, Session 2: Word Counter
-
+with open("story.txt", "r") as infile:
+    text = infile.read()
+words = text.split()
+wordcount = len(words)
+print(wordcount)
 # We want to read in a text file, and calculate how many words are in it. 
 # You can use any of the .txt files to test this - or even make your own.
 
