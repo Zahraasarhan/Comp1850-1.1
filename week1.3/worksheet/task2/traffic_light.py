@@ -16,3 +16,16 @@ print(f"Time {systime:03} State {state}")
 # Simulate the traffic light system up to time=maxtime in 1-second steps
 
 # At the end of each step you should output the time and state using the statement on line 14
+
+state_names = list(states)
+state_index = 0
+time_in_state = 0
+while systime < maxtime:
+    systime += 1
+    time_in_state += 1
+    if time_in_state == states[state]:
+        state_index = (state_index + 1) % len(state_names)
+        state = state_names[state_index]
+        time_in_state = 0
+    print(f"Time {systime:03} State {state}")
+     
