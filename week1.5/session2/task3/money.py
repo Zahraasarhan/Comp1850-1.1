@@ -9,6 +9,7 @@ class Money:
         """
         Creates a Money object, given the number of pounds and pence.
         """
+        
         # Add validation code here, to check that
         # - the pounds parameter is an integer
         # - pounds is not negative
