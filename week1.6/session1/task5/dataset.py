@@ -33,6 +33,17 @@ class QuakeDataset:
 
         The new data replaces any existing data.
         """
+        self.data=[]
+        for row in self.feed.reader():
+            quake = Quake(
+                datetime.fromisoformat(row["time"].replace("z", "+00:0")),
+                float(row["longitude"]),
+                float(row["latitude"]),
+                float(row["depth"]),
+                float(row[mag]),
+
+            )
+            self.data.append(quake)
         # Write code here to replace existing data with new earthquake data.
         # Use the value returned by the feed's reader() method as the
         # subject of a for loop.
@@ -46,6 +57,7 @@ class QuakeDataset:
         """
         Returns the size of this dataset.
         """
+
         # Write code here that returns the number of quakes downloaded
 
     def __str__(self):
