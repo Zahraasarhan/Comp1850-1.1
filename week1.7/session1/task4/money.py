@@ -42,3 +42,4 @@ class Money:
         sum_pence = (self.pence + other.pence) % 100
 
         return Money(sum_pounds + extra_pound, sum_pence)
+    
