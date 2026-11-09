@@ -19,8 +19,8 @@ for row in data:
     # hint: there are 1440 minutes in a day (24 * 60)
     
     days = minutes_late // 1440
-    hours = 0
-    minutes = 0
+    hours = (minutes_late % 1440) // 60
+    minutes = minutes_late % 60
     
     print(f"Student {row[0]}: {days}D {hours}H {minutes}M")
 
