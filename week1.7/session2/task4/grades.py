@@ -19,9 +19,17 @@ def read_marks(filename):
     with open(filename, "rt") as infile:
         data = {}
         infile.readline()  # skip column headings
+
         for line in infile:
             name, mark = line.strip().split(",")
-            data[name] = mark
+
+            # Convert the mark from a sring to an integer.
+            try:
+                data[name] = int(mark)
+            except ValueError:
+                raise MarkError(
+                    f"Invalid mark for {name}: {mark}"
+                )
         return data
 
 
@@ -35,14 +43,17 @@ def grade(mark):
 
     MarkError is raised if the provided mark is not valid.
     """
+
+    #Check the type and range before assigning a grade.
+    if type(mark) is not int or mark < 0 or mark > 100:
+        raise MarkError("marks must be integers in range 0-100")
+
     if 0 <= mark < 40:
         return "Fail"
     elif 40 <= mark <= 70:
         return "Pass"
     elif 70 <= mark <= 100:
         return "Distinction"
-    else:
-        raise MarkError("marks must be in range 0-100")
 
 
 if __name__ == "__main__":
