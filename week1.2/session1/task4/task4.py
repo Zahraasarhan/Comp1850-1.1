@@ -4,12 +4,12 @@ fruit = {"apple", "orange", "tomato"}
 vegetables = {"leek", "tomato", "potato"}
 
 # What do you think will be printed here?
-
+# the output nwill be{'Tomato'} because intrsection () returns the elelments that are present in both sets.
 both = fruit.intersection(vegetables)
 print(both)
 
 # Why does the following code diplay five items?
-
+#The union() method combines the whole uniqe elements in both sets, however although the total number of the items are 6 "tomato" appears in both sets and is only included once.
 food = fruit.union(vegetables)
 print(food)
 

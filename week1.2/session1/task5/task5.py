@@ -20,3 +20,5 @@ print(rivers.items())
 # Delete an entry from the rivers database
 rivers.pop("Liverpool")
 print(rivers)
+
+
