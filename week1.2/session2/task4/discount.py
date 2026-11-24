@@ -8,8 +8,10 @@
 
 # Look at the discounts in the final_cost calculation to match these up,
 # and think about WHY they are in this order!
+# Answer: we need to check the most specific condition first, which is when the person is both a student and a member.
 
-cost = int(input("Amount spent: "))
+
+cost = float(input("Amount spent: "))
 is_member = input("Are you a member? (y/n): ").lower()
 is_student = input("Are you a student? (y/n): ").lower()
 

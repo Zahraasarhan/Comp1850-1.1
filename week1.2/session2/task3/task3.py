@@ -3,7 +3,7 @@
 
 # Prompt the user to enter their age
 
-age = int(input("Enter your age: "))
+age = int(input("Enter your age:"))
 
 # Use an if statement to check if the user is 18 or over
 # (Replace XXX with a suitable boolean expression)
